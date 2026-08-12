@@ -89,6 +89,26 @@
       margin-top: 2px;
     }
 
+    /* Notice box for security restrictions */
+    .notice-card {
+      background-color: #261c14;
+      border: 1px solid #52371d;
+    }
+
+    .notice-title {
+      color: #ffb300;
+      font-weight: bold;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .notice-text {
+      font-size: 0.78rem;
+      color: #d1c2b4;
+      line-height: 1.4;
+    }
+
     /* Primary Refresh Button */
     button {
       background-color: #00e676;
@@ -172,7 +192,15 @@
     </div>
   </div>
 
-  <!-- 4. Device & Browser Protocol Data -->
+  <!-- 4. Cellular Hardware Security Note -->
+  <div class="card notice-card">
+    <div class="notice-title">⚠️ Cellular Radio Hardware Note</div>
+    <div class="notice-text">
+      <strong>TAC, eNB ID, PCI, Band, and dBm Signal Strength</strong> cannot be accessed by web applications. iOS and Android security models block web browsers from accessing raw cellular radio hardware to prevent user tracking. These metrics require a native Android app compiled in Kotlin using <code>TelephonyManager</code>.
+    </div>
+  </div>
+
+  <!-- 5. Device & Browser Protocol Data -->
   <div class="card">
     <div class="card-title">Protocol & Client Telemetry</div>
     <div class="metric-grid">
@@ -314,4 +342,3 @@
   </script>
 </body>
 </html>
-
